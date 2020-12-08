@@ -24,7 +24,8 @@ for i in range(len(name)):
         print(" ", end="")
         
     print(name[i])
-  
+  ## OUTPUT:
+  ![](diagonal.PNG)
   
 ## QUESTION NO.2 Create a program to take as input 5 student records in the following format:
 **roll_num** | **name** | **age** | **marks**(out of 100)
@@ -74,7 +75,9 @@ print("average marks of class are: ",sum/5)
 * we are appending marks and the whole record (including marks) separately for the ease of calculating maximum, minimum and average of class marks 
 * function max and min is used to find the highest and lowest marks of the class.
 * dividing the sum by 5 which is the total number of records, we get average.
-
+## OUTPUT:
+  ![](record.PNG)
+  
 ## QUESTION NO.3 A function that will print lyrics of given song with 1 second delay between each line.
 
 
@@ -87,3 +90,5 @@ for i in range(len(line)):
     print(line[i])
     
     time.sleep(1)
+## OUTPUT:
+  ![](song.PNG)
