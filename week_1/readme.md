@@ -3,7 +3,7 @@
 ## QUESTION NO.1 Define a function to print a string diagonally.
 
 
-*For this question's condition I set the range to the length of whatever the input string we will get and then nested another for loop in which will run according to the outer for loop. the outer for loop prints string character meanwhile the inner forloop prints spaces
+* For this question's condition I set the range to the length of whatever the input string we will get and then nested another for loop in which will run according to the outer for loop. the outer for loop prints string character meanwhile the inner forloop prints spaces
 
 
 for i in range(len(name)):
@@ -15,7 +15,7 @@ for i in range(len(name)):
     print(name[i])
     
     
-*To reverse the diagonal I simply changed the range value in inner loop to (length - i) so for the first time it will print 4-4=0 spaces, for second run it will be 4-3=1 space and so on. 
+* To reverse the diagonal I simply changed the range value in inner loop to (length - i) so for the first time it will print 4-4=0 spaces, for second run it will be 4-3=1 space and so on. 
 
 for i in range(len(name)):
 
@@ -70,15 +70,15 @@ print("lowest marks in class are: ",min(num))
 
 print("average marks of class are: ",sum/5)
 
-*I took list L for the record and list num for marks. Dictionary D is for the records that we will input. Each dictionary is equal to one record D={}
-*we are appending marks and the whole record (including marks) separately for the ease of calculating maximum, minimum and average of class marks 
+* I took list L for the record and list num for marks. Dictionary D is for the records that we will input. Each dictionary is equal to one record D={}
+* we are appending marks and the whole record (including marks) separately for the ease of calculating maximum, minimum and average of class marks 
 * function max and min is used to find the highest and lowest marks of the class.
 * dividing the sum by 5 which is the total number of records, we get average.
 
 ## QUESTION NO.3 A function that will print lyrics of given song with 1 second delay between each line.
 
 
-*After importing time and writing the song with escape sequence \n , I used splitlines to split each line of the song and then with the range set to number of verses I started to print the lines with one sec delay with the help of time.sleep(sec)
+* After importing time and writing the song with escape sequence \n , I used splitlines to split each line of the song and then with the range set to number of verses I started to print the lines with one sec delay with the help of time.sleep(sec)
 
 line=song.splitlines()
 
