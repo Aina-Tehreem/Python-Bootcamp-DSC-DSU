@@ -21,7 +21,7 @@ Setting reverse = True sorts the list in the descending order.
 
     pair.sort(reverse=True)
     print("After sorting:\n",pair)
-##output:
+## output:
 
 ![](sshot-3.png)
 
@@ -33,13 +33,18 @@ Setting reverse = True sorts the list in the descending order.
     import json
     from selenium import  webdriver
 
-    #inspect > Network > disable cache and hide data urls > refresh page >GetAllSchools >Request URL
+
+We will get this magic api by going to --> inspect > Network > disable cache and hide data urls > refresh page >GetAllSchools >Request URL
+    
     page_url= 'https://directory.ntschools.net/api/System/GetAllSchools'
     r=requests.get(page_url)
     htmlcontent=r.text
     soup=BeautifulSoup(htmlcontent,'html.parser')
     #print(soup.prettify())
     parsed_data= json.loads(htmlcontent)
+    
+Here we create the csv in which we will store the data:
+
     with open('school.csv', "w") as f:
         thewriter= csv.writer(f)
         thewriter.writerow(['Name', 'Address','Principal/Admin Name', 'Position', 'Telephone', 'Email'])
@@ -52,6 +57,9 @@ Setting reverse = True sorts the list in the descending order.
             a=json.loads(r.content)
             name = (a['name'])
             address = (a['physicalAddress']['displayAddress'])
+            
+It is possible that in some cases there is no admin in the school and only a principal so we will use TRY/EXCEPT to check whether an error will arrise at [1] and if it does arrise, we will check the [0]
+
             try:
                 principal_name = (a['schoolManagement'][1]['firstName'] + " " + a['schoolManagement'][1]['lastName'])
                 position = (a['schoolManagement'][1]['position'])
@@ -66,5 +74,6 @@ Setting reverse = True sorts the list in the descending order.
             thewriter.writerow([name, address, principal_name, position, phone, email])
             if count==50:
                 break
-                
+ ## output
+ ![](sshot-4.png)
                 
